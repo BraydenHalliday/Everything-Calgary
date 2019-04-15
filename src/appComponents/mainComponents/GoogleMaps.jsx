@@ -32,11 +32,22 @@ class MapContainer extends Component {
     console.log(marker)
     switch (this.props.topic) {
       case "construction permits":
-        if(marker.description && marker.description.includes('Deck')) {
-          return "../../../public/images/deckIcon.png"
-        } else if(marker.description && marker.description.includes('Improvements')) {
-          return "../../../public/images/RenoIcon.png";
-        } else 
+        if(marker.permiteDuration < 8) {
+          return "../../../public/images/star1.ico"
+        } 
+        else if (marker.description && marker.description.includes('Deck')) {
+          return "../../../public/images/deck1Icon.png"
+        }
+        else if(marker.description && marker.description.includes('Improvements')) {
+          return "../../../public/images/Reno1Icon.png";
+        } 
+        else if(marker.description && marker.description.includes('Garage')) {
+          return "../../../public/images/garage1.png";
+        }
+        else if(marker.description && marker.description.includes('Basement')) {
+          return "../../../public/images/basementIcon.png";
+        }
+        else 
         return "../../../public/images/home.png";
       case "traffic incidents":
         return "../../../public/images/accident.png";
