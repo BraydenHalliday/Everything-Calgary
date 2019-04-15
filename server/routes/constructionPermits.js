@@ -21,6 +21,7 @@ function permitDuration(issuedDate) {
 function preparePermitsData(permitsData) {
   let outputData = [];
   permitsData.forEach(permit => {
+    
     outputData.push({
       key: generateKey(),
       permiteDuration: permitDuration(permit.issueddate),
@@ -30,7 +31,11 @@ function preparePermitsData(permitsData) {
       type: permit.permittype,
       status: permit.statuscurrent,
       address: permit.originaladdress,
-      geolocation: permit.locationsgeojson
+      geolocation: permit.locationsgeojson,
+      permitClass: permit.permitclass,
+      community: permit.communityname,
+     
+
     });
   });
   return outputData;

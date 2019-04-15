@@ -28,9 +28,15 @@ class MapContainer extends Component {
       showingInfoWindow: true
     });
 
-  selectIcon = () => {
+  selectIcon = (marker) => {
+    console.log(marker)
     switch (this.props.topic) {
       case "construction permits":
+        if(marker.description && marker.description.includes('Deck')) {
+          return "../../../public/images/deckIcon.png"
+        } else if(marker.description && marker.description.includes('Improvements')) {
+          return "../../../public/images/RenoIcon.png";
+        } else 
         return "../../../public/images/home.png";
       case "traffic incidents":
         return "../../../public/images/accident.png";
@@ -52,7 +58,8 @@ class MapContainer extends Component {
   render() {
     var bounds = new this.props.google.maps.LatLngBounds();
     this.props.polygonCoords.reverse().map(polygon => bounds.extend(polygon));
-    const icon = this.selectIcon();
+  
+    
 
     let markers = this.props.pins.map(marker => {
       return (
@@ -63,7 +70,7 @@ class MapContainer extends Component {
           title={marker.address}
           onClick={this.onMarkerClick}
           animation={google.maps.Animation.DROP}
-          icon={icon}
+          icon={this.selectIcon(marker)}
         />
       );
     });
@@ -96,11 +103,27 @@ class MapContainer extends Component {
               </tr>
             </thead>
             <tbody>
+            <tr>
+                <th scope="row">Community:</th>
+                <td>
+                  {this.state.selectedPlace.name
+                    ? this.state.selectedPlace.name.community
+                    : ""}
+                </td>
+              </tr>
               <tr>
                 <th scope="row">Project type:</th>
                 <td>
                   {this.state.selectedPlace.name
                     ? this.state.selectedPlace.name.type
+                    : ""}
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Permit Class:</th>
+                <td>
+                  {this.state.selectedPlace.name
+                    ? this.state.selectedPlace.name.permitClass
                     : ""}
                 </td>
               </tr>
