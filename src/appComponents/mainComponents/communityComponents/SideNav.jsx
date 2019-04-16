@@ -24,17 +24,21 @@ class Sidenav extends Component {
           <li className={this.props.data.topic === 'construction permits' ? 'IconKey': 'IconKeyClosed'}>
 
              <li className={this.props.data.topic === 'construction permits' ? 'IconKeyItem': 'IconKeyItemClosed'}>{this.props.data.topic === 'construction permits' ? 
-            <strong><ul>Click on an icon to see the permits information
+            <strong><ul>Click on an icon to see a permit's information
             </ul></strong>
           : null}</li>
           <li className={this.props.data.topic === 'construction permits' ? 'IconKeyItem': 'IconKeyItemClosed'}>{this.props.data.topic === 'construction permits' ? 
-            <ul>Project started Within 7 days and is a Reno or Deck 
+            <ul> Project has bein in progress less than 
               <img className='KeyIcon' src="../public/images/Star1.ico" />{" "}
+               7 days and is a Reno or Deck
             </ul>
+            
           : null}</li>
           <li className={this.props.data.topic === 'construction permits' ? 'IconKeyItem': 'IconKeyItemClosed'}>{this.props.data.topic === 'construction permits' ? 
-            <ul>Project started Within 7 days
+            <ul>Project has bein in progress
               <img className='KeyIcon' src="../public/images/newGreen.png" />{" "}
+              less than 7 days
+              
             </ul>
           : null}</li>
           <li className={this.props.data.topic === 'construction permits' ? 'IconKeyItem': 'IconKeyItemClosed'}>{this.props.data.topic === 'construction permits' ? 

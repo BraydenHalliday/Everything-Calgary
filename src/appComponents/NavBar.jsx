@@ -20,7 +20,7 @@ class NavBar extends Component {
           <section>
             
           <a className="navbar-brand" href='https://www.greatstairs.com/'>
-            <img id="logo" src="../../../public/images/SSR_Logo_Black1.png" alt="logo" />{" "}
+            <img id="logo" src="../../../public/images/SSR_Logo_Black2.png" alt="logo" />{" "}
           </a>
         
           </section>
@@ -46,7 +46,7 @@ class NavBar extends Component {
       return (
         <nav className="navbar fixed navbar-light">
            <a className="navbar-brand" href='https://www.greatstairs.com/'>
-            <img id="logo" src="../../../public/images/SSR_Logo_Black1.png" alt="logo" />{" "}
+            <img id="logo" src="../../../public/images/SSR_Logo_Black2.png" alt="logo" />{" "}
           </a>
           <section>
             <form className="form-inline" onSubmit={checkCommunity}>
@@ -70,7 +70,7 @@ class NavBar extends Component {
       return (
         <nav className="navbar fixed sticky-top navbar-light">
           <a className="navbar-brand" href='https://www.greatstairs.com/'>
-            <img id="logo-Jumbo" src="../../../public/images/SSR_Logo_Black1.png" alt="logo" />{" "}
+            <img id="logo-Jumbo" src="../../../public/images/SSR_Logo_Black2.png" alt="logo" />{" "}
           </a>
    
         </nav>

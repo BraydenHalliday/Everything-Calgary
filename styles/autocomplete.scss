@@ -4,6 +4,7 @@ $color3: #EDF2F4;
 $color4: #EF233C;
 $color5: #D90429;
 $color6: #cea425;
+$color7: #1A1819;
 
 input {
   border: 1px solid #999;
@@ -12,8 +13,10 @@ input {
 }
 
 .no-suggestions {
-  color: #999;
+  color: $color6;
   padding: 0.5rem;
+  background-color:$color7;
+  border-radius:0.5em;
 }
 
 .suggestions {
