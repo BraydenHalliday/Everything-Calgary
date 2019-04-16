@@ -37,16 +37,16 @@ class MapContainer extends Component {
         } 
 
         else if (marker.permiteDuration < 8) {
-          return "../../../public/images/newIcon.png"
+          return "../../../public/images/newGreen.png"
         }
         else if (marker.description && marker.description.includes('Deck')) {
-          return "../../../public/images/deck1Icon.png"
+          return "../../../public/images/Deck2.png"
         }
         else if(marker.description && marker.description.includes('Improvements')) {
           return "../../../public/images/Reno1Icon.png";
         } 
         else if(marker.description && marker.description.includes('Garage')) {
-          return "../../../public/images/garage1.png";
+          return "../../../public/images/GarageIcon2.png";
         }
         else if(marker.description && marker.description.includes('Basement')) {
           return "../../../public/images/basementIcon.png";
