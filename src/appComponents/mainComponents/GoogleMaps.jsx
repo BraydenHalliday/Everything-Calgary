@@ -32,9 +32,13 @@ class MapContainer extends Component {
     console.log(marker)
     switch (this.props.topic) {
       case "construction permits":
-        if(marker.permiteDuration < 8) {
+        if(marker.permiteDuration < 8 && (marker.description && (marker.description.includes('Deck') || marker.description.includes('Improvements')))) {
           return "../../../public/images/star1.ico"
         } 
+
+        else if (marker.permiteDuration < 8) {
+          return "../../../public/images/newIcon.png"
+        }
         else if (marker.description && marker.description.includes('Deck')) {
           return "../../../public/images/deck1Icon.png"
         }

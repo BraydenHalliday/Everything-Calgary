@@ -17,7 +17,7 @@ class Jumbotron extends Component {
     return (
       <React.Fragment>
         <div className="jumbotron">
-          <h1 className="display-4">Welcome to Calgary!</h1>
+          <h1 className="display-4">Community Information Tool</h1>
           <hr></hr>
           <form className="form-inline" onSubmit={checkCommunity}>
             <Autocomplete
@@ -27,7 +27,7 @@ class Jumbotron extends Component {
               suggestions={suggestions}
             />
             <button
-              className="btn btn-outline-danger my-2 my-sm-0"
+              className="btn my-2 my-sm-0"
               type="submit"
             >
               Search

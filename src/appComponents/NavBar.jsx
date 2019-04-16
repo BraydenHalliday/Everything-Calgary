@@ -18,20 +18,10 @@ class NavBar extends Component {
       return (
         <nav className="navbar fixed navbar-light">
           <section>
-            <a onClick={this.props.showJumbotron} className="navbar-brand">
-              <img id="logo" src="https://github.com/GideonBrasil/Everything-Calgary/blob/master/public/images/logo1.png?raw=true" alt="logo" />{" "}
-            </a>
-              <div id="calgary-now">
-                <button
-                  style={{ color: 'white'}}
-                  className="btn btn-danger btn-lg btn2"
-                  id="btn2"
-                  role="button"
-                  onClick={this.props.showCalgary}
-                >
-                  Calgary Now!
-                </button>
-              </div>
+          <a className="navbar-brand">
+            <img id="logo" src="../../../public/images/SSRLogo.jpg" alt="logo" />{" "}
+          </a>
+        
           </section>
           <section>
             <form className="form-inline" onSubmit={checkCommunity}>
@@ -54,8 +44,8 @@ class NavBar extends Component {
     } else if (this.props.calgary === true){
       return (
         <nav className="navbar fixed navbar-light">
-          <a onClick={this.props.showJumbotron} className="navbar-brand">
-            <img id="logo" src="https://github.com/GideonBrasil/Everything-Calgary/blob/master/public/images/logo1.png?raw=true" alt="logo" />{" "}
+           <a className="navbar-brand">
+            <img id="logo" src="../../../public/images/SSRLogo.jpg" alt="logo" />{" "}
           </a>
           <section>
             <form className="form-inline" onSubmit={checkCommunity}>
@@ -79,16 +69,9 @@ class NavBar extends Component {
       return (
         <nav className="navbar fixed sticky-top navbar-light">
           <a className="navbar-brand">
-            <img id="logo" src="https://github.com/GideonBrasil/Everything-Calgary/blob/master/public/images/logo1.png?raw=true" alt="logo" />{" "}
+            <img id="logo" src="../../../public/images/SSRLogo.jpg" alt="logo" />{" "}
           </a>
-            <button
-            className="btn btn-danger btn-lg"
-            id="btn2"
-            role="button"
-            onClick={this.props.showCalgary}
-          >
-            Calgary Now!
-          </button>
+   
         </nav>
       );
     }

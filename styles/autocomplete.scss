@@ -3,6 +3,7 @@ $color2: #8D99AE;
 $color3: #EDF2F4;
 $color4: #EF233C;
 $color5: #D90429;
+$color6: #cea425;
 
 input {
   border: 1px solid #999;
@@ -37,7 +38,7 @@ input {
 
 .suggestion-active,
 .suggestions li:hover {
-  background-color: $color4;
+  background-color: $color6;
   color: white;
   cursor: pointer;
   font-weight: 700;

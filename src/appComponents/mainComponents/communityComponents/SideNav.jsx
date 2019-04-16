@@ -6,7 +6,7 @@ class Sidenav extends Component {
     return (
       <nav id="sidebar" className="col">
         <div className="sidebar-header">
-          <h5>Everything about... <br /></h5>
+          <h5>Kevin wants to tell you about... <br /></h5>
           <br></br>
           <h4>
             {this.props.data.community.replace("/", "/\n")}
@@ -20,6 +20,41 @@ class Sidenav extends Component {
             >
             <a id="construction permits">Construction Permits</a>
           </li>
+
+          <div className={this.props.data.topic === 'construction permits' ? 'active': null}>
+          <li>{this.props.data.topic === 'construction permits' ? 
+            <ul>Issued Within 7 days and is a Reno or Deck  =>
+              <img id="logo" src="../public/images/StarP1.ico" alt="logo"/>{" "}
+            </ul>
+          : null}</li>
+          <li>{this.props.data.topic === 'construction permits' ? 
+            <ul>Issued Within 7 days =>
+              <img id="logo" src="../public/images/newIcon.png" alt="logo"/>{" "}
+            </ul>
+          : null}</li>
+          <li>{this.props.data.topic === 'construction permits' ? 
+            <ul>Renovation       =>
+              <img id="logo" src="../public/images/Reno1Icon.png" alt="logo"/>{" "}
+            </ul>
+          : null}</li>
+          <li>{this.props.data.topic === 'construction permits' ? 
+            <ul>Deck/Patio      =>
+              <img id="logo" src="../public/images/deck1Icon.png" alt="logo"/>{" "}
+             </ul>
+          : null}</li>
+          <li>{this.props.data.topic === 'construction permits' ? 
+            <ul>Garage       =>
+              <img id="logo" src="../public/images/Garage1.png" alt="logo"/>{" "}
+            </ul>
+            : null}</li>
+          <li>{this.props.data.topic === 'construction permits' ? 
+            <ul>All other permits    =>
+              <img id="logo" src="../public/images/home.png" alt="logo"/>{" "}
+            </ul>
+          : null}</li>
+          </div>
+
+
           <li
             className={this.props.data.topic === 'crime' ? 'active': null}
             onClick={this.props.chooseStatistics}

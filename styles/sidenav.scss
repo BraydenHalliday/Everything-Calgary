@@ -3,6 +3,7 @@ $color2: #8D99AE;
 $color3: #EDF2F4;
 $color4: #EF233C;
 $color5: #D90429;
+$color6: #cea425;
 
 .wrapper {
   display: flex;
@@ -11,7 +12,7 @@ $color5: #D90429;
 }
 
 .sidebar-header {
-  border: 1px white solid;
+
   margin-top: 10px;
   border-radius: 5px;
   padding: 10px;
@@ -23,7 +24,7 @@ $color5: #D90429;
 #sidebar {
   min-width: 250px;
   max-width: 250px;
-  background: #676767;
+  background: $color1;
   color: #fff;
   transition: all 0.3s;
 }
@@ -31,9 +32,13 @@ $color5: #D90429;
 #sidebar.active {
   margin-left: -250px;
 }
-
+.IconKey {
+  background-color: white;
+  color: black;
+  margin-top: 20em;
+}
 #sidebar .sidebar-header {
-  background: $color5;
+  background: $color6;
 }
 
 #sidebar ul.components {
@@ -55,15 +60,15 @@ $color5: #D90429;
 }
 
 #sidebar ul li a:hover {
-  color: $color4;
-  background: #fff;
+  color: $color3;
+  background: $color6;
   cursor: pointer;
 }
 
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
   color: #fff;
-  background: $color4;
+  background: $color6;
 }
 
 a[data-toggle="collapse"] {
