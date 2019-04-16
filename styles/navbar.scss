@@ -4,11 +4,12 @@ $color3: #EDF2F4;
 $color4: #EF233C;
 $color5: #D90429;
 $color6: #cea425;
+$color7: #1A1819;
 
 .navbar {
   display: flex;
   justify-content: space-between;
-  background-color: $color1;
+  background-color: $color7;
   section {
     display: flex;
     justify-content: space-between;
@@ -17,7 +18,7 @@ $color6: #cea425;
   #logo {
     max-height: 53px;
     border-radius: 7px;
-    border-color: $color6 1px solid;
+    //border-color: $color6 1px solid;
   }
   section {
     display: flex;

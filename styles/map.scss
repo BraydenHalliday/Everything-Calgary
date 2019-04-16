@@ -7,6 +7,7 @@ $color5: #D90429;
 #map {
   height: 425px;
   margin-right: 10px;
+
 }
 
 /* Optional: Makes the sample page fill the window. */
@@ -21,7 +22,7 @@ body {
 }
 
 .mapCol {
-  margin: 0 15px;
+  margin: 0;
   border: $color2 solid 0.8px;
   padding: 0;
   overflow: hidden;

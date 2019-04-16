@@ -18,8 +18,9 @@ class NavBar extends Component {
       return (
         <nav className="navbar fixed navbar-light">
           <section>
-          <a className="navbar-brand">
-            <img id="logo" src="../../../public/images/SSRLogo.jpg" alt="logo" />{" "}
+            
+          <a className="navbar-brand" href='https://www.greatstairs.com/'>
+            <img id="logo" src="../../../public/images/SSR_Logo_Black1.png" alt="logo" />{" "}
           </a>
         
           </section>
@@ -44,8 +45,8 @@ class NavBar extends Component {
     } else if (this.props.calgary === true){
       return (
         <nav className="navbar fixed navbar-light">
-           <a className="navbar-brand">
-            <img id="logo" src="../../../public/images/SSRLogo.jpg" alt="logo" />{" "}
+           <a className="navbar-brand" href='https://www.greatstairs.com/'>
+            <img id="logo" src="../../../public/images/SSR_Logo_Black1.png" alt="logo" />{" "}
           </a>
           <section>
             <form className="form-inline" onSubmit={checkCommunity}>
@@ -68,8 +69,8 @@ class NavBar extends Component {
     } else {
       return (
         <nav className="navbar fixed sticky-top navbar-light">
-          <a className="navbar-brand">
-            <img id="logo" src="../../../public/images/SSRLogo.jpg" alt="logo" />{" "}
+          <a className="navbar-brand" href='https://www.greatstairs.com/'>
+            <img id="logo" src="../../../public/images/SSR_Logo_Black1.png" alt="logo" />{" "}
           </a>
    
         </nav>

@@ -21,38 +21,44 @@ class Sidenav extends Component {
             <a id="construction permits">Construction Permits</a>
           </li>
 
-          <div className={this.props.data.topic === 'construction permits' ? 'active': null}>
-          <li>{this.props.data.topic === 'construction permits' ? 
-            <ul>Issued Within 7 days and is a Reno or Deck  =>
-              <img id="logo" src="../public/images/StarP1.ico" alt="logo"/>{" "}
+          <li className={this.props.data.topic === 'construction permits' ? 'IconKey': 'IconKeyClosed'}>
+          <li className={this.props.data.topic === 'construction permits' ? 'IconKeyItem': 'IconKeyItemClosed'}>{this.props.data.topic === 'construction permits' ? 
+            <ul>Issued Within 7 days and is a Reno or Deck 
+              <img className='KeyIcon' src="../public/images/StarP1.ico" />{" "}
             </ul>
           : null}</li>
-          <li>{this.props.data.topic === 'construction permits' ? 
-            <ul>Issued Within 7 days =>
-              <img id="logo" src="../public/images/newIcon.png" alt="logo"/>{" "}
+          <li className={this.props.data.topic === 'construction permits' ? 'IconKeyItem': 'IconKeyItemClosed'}>{this.props.data.topic === 'construction permits' ? 
+            <ul>Issued Within 7 days
+              <img className='KeyIcon' src="../public/images/newIcon.png" />{" "}
             </ul>
           : null}</li>
-          <li>{this.props.data.topic === 'construction permits' ? 
-            <ul>Renovation       =>
-              <img id="logo" src="../public/images/Reno1Icon.png" alt="logo"/>{" "}
+          <li className={this.props.data.topic === 'construction permits' ? 'IconKeyItem': 'IconKeyItemClosed'}>{this.props.data.topic === 'construction permits' ? 
+            <ul>Renovation  
+              <img className='KeyIcon' src="../public/images/Reno1Icon.png" />{" "}
             </ul>
           : null}</li>
-          <li>{this.props.data.topic === 'construction permits' ? 
-            <ul>Deck/Patio      =>
-              <img id="logo" src="../public/images/deck1Icon.png" alt="logo"/>{" "}
+          <li className={this.props.data.topic === 'construction permits' ? 'IconKeyItem': 'IconKeyItemClosed'}>{this.props.data.topic === 'construction permits' ? 
+            <ul>Deck/Patio
+              <img className='KeyIcon' src="../public/images/deck1Icon.png" />{" "}
              </ul>
           : null}</li>
-          <li>{this.props.data.topic === 'construction permits' ? 
-            <ul>Garage       =>
-              <img id="logo" src="../public/images/Garage1.png" alt="logo"/>{" "}
+
+          <li className={this.props.data.topic === 'construction permits' ? 'IconKeyItem': 'IconKeyItemClosed'}>{this.props.data.topic === 'construction permits' ? 
+          <ul>Basement Reno
+            <img className='KeyIcon' src="../public/images/basementIcon.png" />{" "}
+           </ul>
+        : null}</li>
+          <li className={this.props.data.topic === 'construction permits' ? 'IconKeyItem': 'IconKeyItemClosed'}>{this.props.data.topic === 'construction permits' ? 
+            <ul>Garage 
+              <img className='KeyIcon' src="../public/images/Garage1.png" alt="logo"/>{" "}
             </ul>
             : null}</li>
-          <li>{this.props.data.topic === 'construction permits' ? 
-            <ul>All other permits    =>
-              <img id="logo" src="../public/images/home.png" alt="logo"/>{" "}
+          <li className={this.props.data.topic === 'construction permits' ? 'IconKeyItem': 'IconKeyItemClosed'}>{this.props.data.topic === 'construction permits' ? 
+            <ul>All other permits
+              <img className='KeyIcon' src="../public/images/home.png" alt="logo"/>{" "}
             </ul>
           : null}</li>
-          </div>
+          </li>
 
 
           <li
