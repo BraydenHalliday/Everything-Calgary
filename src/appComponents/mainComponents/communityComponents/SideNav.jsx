@@ -28,12 +28,12 @@ class Sidenav extends Component {
             </ul></strong>
           : null}</li>
           <li className={this.props.data.topic === 'construction permits' ? 'IconKeyItem': 'IconKeyItemClosed'}>{this.props.data.topic === 'construction permits' ? 
-            <ul>Issued Within 7 days and is a Reno or Deck 
+            <ul>Project started Within 7 days and is a Reno or Deck 
               <img className='KeyIcon' src="../public/images/Star1.ico" />{" "}
             </ul>
           : null}</li>
           <li className={this.props.data.topic === 'construction permits' ? 'IconKeyItem': 'IconKeyItemClosed'}>{this.props.data.topic === 'construction permits' ? 
-            <ul>Issued Within 7 days
+            <ul>Project started Within 7 days
               <img className='KeyIcon' src="../public/images/newGreen.png" />{" "}
             </ul>
           : null}</li>

@@ -86,6 +86,15 @@ body {
       }
     }
   }
+  .display-name{
+    padding-left:0.5em;
+    padding-right: 0.5em;
+    
+    color: $color6;
+    background-color: $color7;
+    border-bottom-left-radius: 8em;
+    border-bottom-right-radius: 8em;
+  }
   .data-table{
     border: black solid 2px;
       td, th {
