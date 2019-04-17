@@ -18,7 +18,7 @@ class Jumbotron extends Component {
       <React.Fragment>
         <div className="jumbotron">
           <h1 className="display-name">Community Information System</h1>
-          <hr></hr>
+         
           <form className="form-inline" onSubmit={checkCommunity}>
             <Autocomplete
               className="form-control mr-sm-2"
