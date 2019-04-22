@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import NavBar from "./appComponents/NavBar.jsx";
 import Main from "./appComponents/main.jsx";
 import Footer from "./appComponents/Footer.jsx";
+import Login from "./appComponents/Login.jsx";
 
 class App extends Component {
   constructor(props) {
@@ -16,7 +17,8 @@ class App extends Component {
       pins: [],
       topic: "",
       calgary: false,
-      signalPins: []
+      signalPins: [],
+      loggedIn: true
     };
     this.updateCommunity = this.updateCommunity.bind(this);
     this.handleClick = this.handleClick.bind(this);
@@ -180,9 +182,19 @@ class App extends Component {
         console.log(err);
       });
   }
+  login(password) {
+    if (password === '123') {
+      this.setState(state => ({
+        loggedIn: true
+      }))
+    }
+   
+  }
 
   render() {
+    if (this.state.loggedIn) {
     return (
+      
       <div id="main-div">
         <NavBar
           jumbotron={this.state.jumbotron}
@@ -200,8 +212,15 @@ class App extends Component {
           showCalgary={this.showCalgary}
         />
         <Footer />
-      </div>
-    );
+      </div>)
+     }
+      
+     else {
+      return (
+        <Login login={this.login}/>
+ 
+      )
+    }
   }
 }
 
